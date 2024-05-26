@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <title>GM</title>
+</head>
+<body>
+<div class="v1_2">
+    <div class="v1_6" style="background-image: url('{{ url_for('static', filename='bg.jpg') }}')">
+        <div class="v5">
+            <img src="{{ url_for('static', filename='hcl.jpg') }}">
+        </div>
+    </div>
+    <div class="v1_7"></div>
+    <div class="v1_8"></div>
+    <div class="v1_9"></div>
+    {% for member in team_members %}
+    {% if member.EmpID==105 %}
+    <span class="v2_10"><h1>{{ member['EmpName'] }}</h1><h4>{{ member['Designation'] }}</h4></span>
+    {% endif %}
+    {% endfor %}
+    <div class="v1_13"></div>
+    <a href="{{ url_for('main.index2') }}">
+        <div class="v2_2"></div>
+        <span class="v2_6"><h2>Michael Smith</h2><h5>CHAIRMAN & CHIEF STRATEGY OFFICER Executive</h5></span>
+    </a>
+    <div class="v2_5"></div>
+    <div class="v2_8" style="height:45px"></div>
+    <div class="v2_200"></div>
+    <span class="v2_600"><h2>Jessica Brown</h2><h5>GENERAL MANAGER || Business Management</h5></span>
+    <div class="v2_500"></div>
+    <div class="v2_8" style="height:55px; top:725px"></div>
+    <div class="v2_7" style="top:780px"></div>
+    <div class="v2_13" style="top:827px"></div>
+    <span class="v2_23" style="top:822px"><h3>Ashley Wilson</h3><h5>TECHNICAL MANAGER</h5></span>
+    <div class="v2_16" style="top:829px"></div>
+    <div class="v2_12" style="top:929px"></div>
+    <a href="{{ url_for('main.index') }}">
+        <span class="v2_25" style="top:922px"><h3>Daniel Garcia</h3><h5>TECHNICAL SPECIALIST</h5></span>
+    </a>
+    <div class="v2_21" style="top:929px"></div>
+    <div class="v2_14" style="top:827px"></div>
+    <span class="v2_24" style="top:822px"><h3>Samantha Thomas</h3><h5>SENIOR TECHNICAL LEAD</h5></span>
+    <div class="v2_20" style="top:829px"></div>
+    <div class="v2_11" style="top:929px"></div>
+    <span class="v2_26" style="top:920px"><h3>Joshua Rodriguez</h3><h5>SENIOR CONSULTANT</h5></span>
+    <div class="v2_22" style="top:929px"></div>
+</div>
+</body>
+</html>

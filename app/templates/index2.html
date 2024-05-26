@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <title>CEO</title>
+</head>
+<body>
+<div class="v1_2">
+    <div class="v1_6" style="background-image: url('{{ url_for('static', filename='bg.jpg') }}')">
+        <div class="v5">
+            <img src="{{ url_for('static', filename='hcl.jpg') }}">
+        </div>
+    </div>
+    <div class="v1_7"></div>
+    <div class="v1_8"></div>
+    <div class="v1_9"></div>
+    {% for member in team_members %}
+    {% if member.EmpID==101 %}
+    <span class="v2_10"><h1>{{ member['EmpName'] }}</h1><h4>{{ member['Designation'] }}</h4></span>
+    {% endif %}
+    {% endfor %}
+    <div class="v1_13"></div>
+    <div class="v2_2"></div>
+    <span class="v2_6"><h2>Michael Smith</h2><h5>CHAIRMAN & CHIEF STRATEGY OFFICER Executive</h5></span>
+    <div class="v2_5"></div>
+    <div class="v2_7"></div>
+    <div class="v2_13"></div>
+    <span class="v2_23"><h3>Sarah Johnson</h3><h5>CEO & MANAGING DIRECTOR</h5></span>
+    <div class="v2_16"></div>
+    <div class="v2_12"></div>
+    <span class="v2_25"><h3>David Martinez</h3><h5>SENIOR VICE PRESIDENT</h5></span>
+    <div class="v2_21"></div>
+    <div class="v2_14"></div>
+    <span class="v2_24"><h3>Emily Davis</h3><h5>CORPORATE VICE PRESIDENT</h5></span>
+    <div class="v2_20"></div>
+    <div class="v2_8"></div>
+    <a href="{{ url_for('main.index1') }}">
+        <div class="v2_11"></div>
+        <span class="v2_26"><h3>Jessica Brown</h3><h5>GENERAL MANAGER</h5></span>
+    </a>
+    <div class="v2_22"></div>
+</div>
+</body>
+</html>

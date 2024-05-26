@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <title>TS</title>
+</head>
+<body>
+<div class="v1_2">
+    <div class="v1_6" style="background-image: url('{{ url_for('static', filename='bg.jpg') }}')">
+        <div class="v5">
+            <img src="{{ url_for('static', filename='hcl.jpg') }}">
+        </div>
+    </div>
+    <div class="v1_7"></div>
+    <div class="v1_8"></div>
+    <div class="v1_9"></div>
+    {% for member in team_members %}
+    {% if member.EmpID==109 %}
+    <span class="v2_10">
+        <h1>{{ member['EmpName'] }}</h1>
+        <h4>{{ member['Designation'] }}</h4>
+    </span>
+    {% endif %}
+    {% endfor %}
+    <div class="v1_13"></div>
+    <a href="{{ url_for('main.index2') }}">
+        <div class="v2_2"></div>
+        <span class="v2_6">
+            <h2>Michael Smith</h2>
+            <h5>CHAIRMAN & CHIEF STRATEGY OFFICER Executive</h5>
+        </span>
+    </a>
+    <div class="v2_5"></div>
+    <div class="v2_8" style="height:45px"></div>
+    <div class="v2_200"></div>
+    <a href="{{ url_for('main.index1') }}">
+        <span class="v2_600">
+            <h2>Jessica Brown</h2>
+            <h5>GENERAL MANAGER || Business Management</h5>
+        </span>
+    </a>
+    <div class="v2_500"></div>
+    <div class="v2_8" style="height:55px; top:725px"></div>
+    <div class="v2_2" style="top:780px"></div>
+    <span class="v2_6" style="top:790px">
+        <h2>Daniel Garcia</h2>
+        <h5>TECHNICAL SPECIALIST || Technical</h5>
+    </span>
+    <div class="v2_5" style="top:790px"></div>
+    <div class="v2_8" style="height:50px; top:885px"></div>
+    <div class="v2_7" style="top:930px"></div>
+    <div class="v2_13" style="top:977px"></div>
+    <span class="v2_23" style="top:972px">
+        <h3>Ashley Wilson</h3>
+        <h5>LEAD CONSULTANT</h5>
+    </span>
+    <div class="v2_16" style="top:979px"></div>
+    <div class="v2_12" style="top:1079px"></div>
+    <span class="v2_25" style="top:1072px">
+        <h3>Matthew Lee</h3>
+        <h5>Technical Lead</h5>
+    </span>
+    <div class="v2_21" style="top:1079px"></div>
+    <div class="v2_14" style="top:977px"></div>
+    <span class="v2_24" style="top:972px">
+        <h3>Lauren Martinez</h3>
+        <h5>Senior Software Engineer</h5>
+    </span>
+    <div class="v2_20" style="top:979px"></div>
+    <div class="v2_11" style="top:1079px"></div>
+    <span class="v2_26" style="top:1070px">
+        <h3>Nicholas Brown</h3>
+        <h5>Senior Test Engineer</h5>
+    </span>
+    <div class="v2_22" style="top:1079px"></div>
+</div>
+</body>
+</html>
